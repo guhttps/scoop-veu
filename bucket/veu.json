@@ -1,0 +1,23 @@
+{
+    "version": "0.7.0",
+    "description": "Esconde dados pessoais e segredos antes de o texto chegar à IA.",
+    "homepage": "https://github.com/guhttps/veu",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://files.pythonhosted.org/packages/9a/2f/1ac73ea89c1651816aaaa6aa7ffe891cc0c28f71984e9ed7b1518ad0d4d9/veu-0.7.0-py3-none-any.whl#/veu-0.7.0-py3-none-any.whl",
+    "hash": "d5e951a2497e33508ffada384206bb16c29731ca0cc7a83e9fd624adff23cc1f",
+    "installer": {
+        "script": [
+            "python -m venv \"$dir\\venv\"",
+            "& \"$dir\\venv\\Scripts\\python.exe\" -m pip install --no-index --no-deps --disable-pip-version-check \"$dir\\veu-$version-py3-none-any.whl\""
+        ]
+    },
+    "bin": "venv\\Scripts\\veu.exe",
+    "checkver": {
+        "url": "https://pypi.org/pypi/veu/json",
+        "jsonpath": "$.info.version"
+    },
+    "autoupdate": {
+        "url": "https://files.pythonhosted.org/packages/py3/v/veu/veu-$version-py3-none-any.whl#/veu-$version-py3-none-any.whl"
+    }
+}
